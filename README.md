@@ -1,20 +1,8 @@
-#include <stdio.h>
-int main()
-{
-   int num;
-   FILE *fptr;
+ex1: exemplo.o 
+	gcc exemplo.o  -o teste
 
-   if ((fptr = fopen("program.txt","r")) == NULL){
-       printf("Error! opening file");
+ex1.o: exemplo.c
+	gcc -c exemplo.c 
 
-       // Program exits if the file pointer returns NULL.
-       exit(1);
-   }
-
-   fscanf(fptr,"%d", &num);
-
-   printf("Value of n=%d\n", num);
-   fclose(fptr); 
-  
-   return 0;
-}
+clean:
+	rm *.o
