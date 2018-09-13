@@ -7,7 +7,7 @@ int main()
    if ((fptr = fopen("program.txt","r")) == NULL){
        printf("Error! opening file");
 
-       // Program exits if the file pointer returns NULL.
+      
        exit(1);
    }
 
